@@ -1,6 +1,7 @@
 import BurgerMenu from '../../BurgerMenu'
 import React, { useEffect, useState } from 'react'
-import ItemsList from './ItemsList/index';
+import ItemsList from './ItemsList';
+import { Container } from './styled'
 
 export default function Header(){
   const [width, setWidth] = useState<number>(0)
@@ -14,7 +15,17 @@ export default function Header(){
   }, [handleWindowState]);
   return (
     width <= 600 ? (
+      <>
       <BurgerMenu />
+        <Container>
+        <figure id="responsive">
+            <img
+              src="/images/devscore.svg"
+              alt="Devscore"
+            />
+        </figure>
+      </Container>
+      </>
     ):
       <ItemsList />
   )
