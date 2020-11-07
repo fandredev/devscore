@@ -1,25 +1,21 @@
-import Image from 'next/image'
-import { Container, Figure } from './styled'
+import BurgerMenu from '../../BurgerMenu'
+import React, { useEffect, useState } from 'react'
+import ItemsList from './ItemsList/index';
 
 export default function Header(){
+  const [width, setWidth] = useState<number>(0)
+  const handleWindowState = () => setWidth(window.innerWidth);
+
+   useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowState);
+    return () => window.removeEventListener("resize", handleWindowState);
+
+  }, [handleWindowState]);
   return (
-    <>
-      <Container>
-        <Figure>
-          <img
-            src="/images/devscore.svg"
-            alt="Devscore"
-          />
-        </Figure>
-        <ol>
-          <li>Início</li>
-          <li>Como funciona</li>
-          <li>Login</li>
-          <li>
-            <button>Avaliar candidatos</button>
-          </li>
-        </ol>
-      </Container>
-    </>
+    width <= 600 ? (
+      <BurgerMenu />
+    ):
+      <ItemsList />
   )
 }

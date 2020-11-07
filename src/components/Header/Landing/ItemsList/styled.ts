@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import colors from '../../../constants/colors'
-import text from '../../../constants/text'
+import colors from '../../../../constants/colors'
 
 export const Container = styled.header`
   display: grid;
@@ -9,9 +8,10 @@ export const Container = styled.header`
   height: 5vw;
   padding: 0 2rem;
 
-  > img {
-    width: 20vw;
-  }
+   @media (max-width: 800px) {
+    grid-template-columns: 30% 1fr;
+   }
+
   > ol {
     display: flex;
     justify-content: space-evenly;
@@ -20,17 +20,12 @@ export const Container = styled.header`
     > li {
       color: ${colors.blue_hard};
       font-weight: 500;
-
-      > button {
-        background: ${colors.blue_hard};
-        border-radius: 5px;
-        padding: .8rem 1.3rem;
-        font-size: 20px;
-        border: transparent;
-        color: #fff;
-      }
     }
   }
 }
 `
-export const Figure = styled.figure``
+export const Figure = styled.figure`
+  > img {
+    width: 20vw;
+  }
+`

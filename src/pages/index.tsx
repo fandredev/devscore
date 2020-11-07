@@ -5,7 +5,7 @@ export default function Landing() {
   return (
     <>
     <Header />
-    <Footer />
+    {/* <Footer /> */}
     </>
   )
 }

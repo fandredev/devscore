@@ -1,3 +1,8 @@
 import { css } from 'styled-components'
 
-export default {}
+export const fullCenter = css`
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+`
