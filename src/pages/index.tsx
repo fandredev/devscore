@@ -1,5 +1,11 @@
-import { Title } from '../styles/Landing'
+import Header from '../components/Header/Landing'
+import Footer from '../components/Footer';
 
-export default function Home() {
-  return <Title>My page</Title>
+export default function Landing() {
+  return (
+    <>
+    <Header />
+    <Footer />
+    </>
+  )
 }
