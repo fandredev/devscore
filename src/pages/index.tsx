@@ -20,7 +20,6 @@ export default function Landing() {
       </figure>
     </Main>
     <SectionInformations>
-      <div>
         <ol>
           <li>
             <img src="/images/icons/arrow-right.svg" alt="" />
@@ -46,7 +45,6 @@ export default function Landing() {
         <figure>
           <img src="/images/menAndComputer.svg"  alt="Imagem ilustrativa de um homem olhando para 3 computadores" />
         </figure>
-      </div>
     </SectionInformations>
     <SectionPass>
       <h2>Apenas 3 passos</h2>
@@ -75,7 +73,7 @@ export default function Landing() {
 
     <SectionTechs>
       <Card text="HTML5" alt="Hyper Text Markup Language" url="/images/icons/html.svg" />
-      <Card text="Javascript" url="/images/icons/js.svg" />
+      <Card text="Javascript" url="/images/js.png" />
       <Card text="CSS3" alt="Cascading Style Sheet" url="/images/icons/css.svg" />
       <Card text="PHP" alt="Cascading Style Sheet" url="/images/icons/php.svg" />
       <Card text="C#" url="images/icons/csharp.svg" />

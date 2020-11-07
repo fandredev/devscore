@@ -12,9 +12,17 @@ const aside = css`
 export const Main = styled.main`
   background: ${colors.orange};
   margin-top: 2rem;
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
   > section {
       color: ${colors.blue_hard};
       text-align: center;
+       @media (min-width: 700px) {
+        text-align: left;
+       }
     > h1 {
       font-family: ${fonts.secondary};
       font-weight: 400;
@@ -24,6 +32,9 @@ export const Main = styled.main`
       font-family: ${fonts.primary};
       padding: 0 1rem;
       line-height: 3rem;
+      @media (min-width: 700px) {
+        padding: 0;
+       }
     }
     > button {
       margin-top: 1rem;
@@ -37,7 +48,10 @@ export const Main = styled.main`
   }
 `
 export const SectionInformations = styled.section`
-  > div {
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+  }
     > ol {
       > li {
         display: flex;
@@ -56,11 +70,15 @@ export const SectionInformations = styled.section`
       }
     }
     > figure {
+      order: -1;
       > img {
         width: 100%;
+        @media (min-width: 700px) {
+          height: 100%;
+        }
       }
     }
-  }
+
 `
 export const SectionPass = styled.section`
   background: ${colors.blue_hard};
@@ -74,6 +92,10 @@ export const SectionPass = styled.section`
   }
 `
 export const SectionStartFree = styled.section`
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+  }
   > aside {
     ${aside};
     > img {
@@ -83,11 +105,22 @@ export const SectionStartFree = styled.section`
       font-weight: 400;
       color: ${colors.blue_hard};
       margin-top: 3rem;
+      @media (min-width: 700px) {
+        text-align: center;
+      }
+      &:first-child {
+        @media (min-width: 700px) {
+          padding: 0 3rem;
+        }
+      }
     }
 }
   div{
     display: flex;
     justify-content: center;
+     @media (min-width: 700px) {
+      grid-column: 1/4
+     }
   }
 `
 export const SectionTestAvailable = styled.section`
@@ -108,6 +141,10 @@ export const SectionTestAvailable = styled.section`
   }
 `
 export const SectionTechs = styled.section`
+  @media (min-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
   aside {
    ${aside};
   }
