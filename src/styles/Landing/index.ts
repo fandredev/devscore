@@ -18,7 +18,7 @@ export const Main = styled.main`
     padding: 0 4rem;
   }
   @media (min-width: 1300px) and (max-width: 1600px) {
-    grid-template-rows: 100vh;
+    grid-template-rows: 60vh;
   }
   > section {
       color: ${colors.blue_hard};
