@@ -32,12 +32,12 @@ export default function Login(): JSX.Element {
                       <Col>
                         <label htmlFor="email">Email</label>
                         <Field name="email" placeholder="John.snow@gmail.com" type="email" />
-                        <ErrorMessage name="email" component="span" style={{color: colors.red}} />
+                        <ErrorMessage name="email" component="span" />
                       </Col>
                       <Col>
                         <label htmlFor="password">Senha</label>
                         <Field name="password" placeholder="*******" type="password" />
-                        <ErrorMessage name="password" component="span" style={{color: colors.red}} />
+                        <ErrorMessage name="password" component="span" />
                       </Col>
                     </Form>
                     <aside>
