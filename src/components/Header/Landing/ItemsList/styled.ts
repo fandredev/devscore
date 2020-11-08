@@ -52,3 +52,4 @@ width: max-content;
     width: 20vw;
   }
 `
+export const Navigate = styled.a`text-decoration: none`

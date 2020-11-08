@@ -5,9 +5,16 @@ import { _Button } from '../components/Button/styled';
 import colors from '../constants/colors'
 import Card from '../components/Card/Landing/index';
 
-export default function Landing() {
+import Head from 'next/head'
+
+export default function Landing() : JSX.Element {
   return (
     <>
+    <Head>
+      <meta charSet="utf-8" />
+      <title>Devscore</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <Header />
     <Main>
       <section>
