@@ -5,8 +5,8 @@ import { fullCenter } from '../../styles/functions'
 
 export const _Footer = styled.footer`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
   background-color: ${colors.blue_hard};
 
   @media (max-width: 800px) {

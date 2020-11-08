@@ -20,28 +20,24 @@ export default function Landing() {
       </figure>
     </Main>
     <SectionInformations>
-        <ol>
-          <li>
+      <aside>
+          <div>
             <img src="/images/icons/arrow-right.svg" alt="" />
-            <span>
-            Tenha uma forma de medir o conhecimento dos seus candidatos.
-            </span>
-          </li>
-          <li>
+            <p>Tenha uma forma de medir o conhecimento dos seus candidatos.</p>
+          </div>
+          <div>
             <img src="/images/icons/arrow-right.svg" alt="" />
-            <span>
-             Teste candidatos de back-end e front-end em diversos níveis de senioridade.
-            </span>
-          </li>
-          <li>
+            <p>Teste candidatos de back-end e front-end em diversos níveis de senioridade.</p>
+          </div>
+          <div>
             <img src="/images/icons/arrow-right.svg" alt="" />
-            <span>Diminua o seu risco na hora de contratar.</span>
-          </li>
-          <li>
+            <p>Diminua o seu risco na hora de contratar.</p>
+          </div>
+          <div>
             <img src="/images/icons/arrow-right.svg" alt="" />
-            <span>Sem cadastro dos candidatos, sem burocracia.</span>
-          </li>
-        </ol>
+            <p>Sem cadastro dos candidatos, sem burocracia.</p>
+          </div>
+      </aside>
         <figure>
           <img src="/images/menAndComputer.svg"  alt="Imagem ilustrativa de um homem olhando para 3 computadores" />
         </figure>
@@ -63,7 +59,7 @@ export default function Landing() {
         <span>Avalie os resultados</span>
       </aside>
       <div>
-        <_Button bg={colors.blue_hard}>Avalie os resultados</_Button>
+        <_Button bg={colors.blue_hard}>Comece gratuitamente</_Button>
       </div>
     </SectionStartFree>
     <SectionTestAvailable>

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.aside`
   > figure {
+    @media (min-width: 700px) {
+      display: flex;
+    }
     @media (max-width: 800px) {
      display: flex;
       justify-content: flex-end;

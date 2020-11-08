@@ -11,10 +11,9 @@ const aside = css`
 
 export const Main = styled.main`
   background: ${colors.orange};
-  margin-top: 2rem;
   @media (min-width: 700px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 60% 1fr;
     padding: 0 2rem;
   }
   > section {
@@ -22,11 +21,18 @@ export const Main = styled.main`
       text-align: center;
        @media (min-width: 700px) {
         text-align: left;
+        margin-top: 20px;
        }
     > h1 {
       font-family: ${fonts.secondary};
       font-weight: 400;
       font-size: 3rem;
+      @media (min-width: 1000px) {
+        font-size: 3.5rem;
+      }
+      @media (min-width: 1200px) and (max-width: 1600px) {
+        font-size: xxx-large;
+      }
     }
     > p {
       font-family: ${fonts.primary};
@@ -35,9 +41,20 @@ export const Main = styled.main`
       @media (min-width: 700px) {
         padding: 0;
        }
+      @media (min-width: 1000px) {
+        width: 72%;
+        line-height: 2.6rem;
+      }
+      @media (min-width: 1200px) and (max-width: 1600px) {
+        line-height: 3.6rem;
+        font-size: large;
+      }
     }
     > button {
       margin-top: 1rem;
+       @media (min-width: 1000px) {
+        width: 46%;
+       }
     }
   }
 
@@ -48,24 +65,30 @@ export const Main = styled.main`
   }
 `
 export const SectionInformations = styled.section`
+    padding: 1rem;
   @media (min-width: 700px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
-    > ol {
-      > li {
+    > aside {
+      div {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        line-height: 2rem;
-        padding: 0 1rem;
-        margin-top: 3rem;
-        color: ${colors.blue_hard};
+        margin: 2rem 0;
         > img {
           width: 10px;
         }
-        > span {
-          margin-left: 1rem;
+
+        > p {
+          padding: 0 2rem;
+          color: ${colors.blue_hard};
+          font-size: 1rem;
+          @media (min-width: 700px) {
+            padding: 1rem;
+            font-size: 13px;
+          }
+          @media (min-width: 1200px) and (max-width: 1600px) {
+            font-size: 2rem;
+          }
         }
       }
     }
@@ -108,6 +131,9 @@ export const SectionStartFree = styled.section`
       @media (min-width: 700px) {
         text-align: center;
       }
+      @media (min-width: 1200px) and (max-width: 1600px) {
+        font-size: 2rem;
+      }
       &:first-child {
         @media (min-width: 700px) {
           padding: 0 3rem;
@@ -131,6 +157,10 @@ export const SectionTestAvailable = styled.section`
     text-align: center;
     margin: 3rem 0;
     padding: 1rem 0;
+     @media (min-width: 1200px) and (max-width: 1600px) {
+      height: 30vh;
+      display: grid;
+     }
   > h3 {
     font-weight: 400;
     font-size: 3rem;
