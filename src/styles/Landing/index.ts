@@ -11,27 +11,34 @@ const aside = css`
 
 export const Main = styled.main`
   background: ${colors.orange};
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     display: grid;
     grid-template-columns: 60% 1fr;
-    padding: 0 2rem;
+    grid-template-rows: 68vh;
+    padding: 0 4rem;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px) {
+    grid-template-rows: 100vh;
   }
   > section {
       color: ${colors.blue_hard};
       text-align: center;
-       @media (min-width: 700px) {
+      align-self: center;
+       @media (min-width: 600px) {
         text-align: left;
-        margin-top: 20px;
+       }
+       @media (min-width: 1000px) {
+        text-align: left;
        }
     > h1 {
       font-family: ${fonts.secondary};
       font-weight: 400;
       font-size: 3rem;
-      @media (min-width: 1000px) {
+      @media (min-width: 1000px) and (max-width: 1199px) {
         font-size: 3.5rem;
       }
       @media (min-width: 1200px) and (max-width: 1600px) {
-        font-size: xxx-large;
+        font-size: 4.3rem;
       }
     }
     > p {
@@ -59,6 +66,7 @@ export const Main = styled.main`
   }
 
   > figure {
+        align-self: self-end;
     > img {
       width: 100%;
     }
@@ -81,10 +89,10 @@ export const SectionInformations = styled.section`
         > p {
           padding: 0 2rem;
           color: ${colors.blue_hard};
-          font-size: 1rem;
+          font-size: 1.3rem;
           @media (min-width: 700px) {
             padding: 1rem;
-            font-size: 13px;
+            font-size: 1.4rem;
           }
           @media (min-width: 1200px) and (max-width: 1600px) {
             font-size: 2rem;
@@ -131,8 +139,12 @@ export const SectionStartFree = styled.section`
       @media (min-width: 700px) {
         text-align: center;
       }
+      @media (min-width: 800px) and (max-width: 1199px){
+        padding: 0 3rem;
+      }
       @media (min-width: 1200px) and (max-width: 1600px) {
         font-size: 2rem;
+        padding: 0 9rem;
       }
       &:first-child {
         @media (min-width: 700px) {

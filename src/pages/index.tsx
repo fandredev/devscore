@@ -11,7 +11,7 @@ export default function Landing() {
     <Header />
     <Main>
       <section>
-        <h1>Avalie seus candidatos de <abbr title="Tecnologia da informação">T.I</abbr></h1>
+        <h1>Avalie os seus candidatos de <abbr title="Tecnologia da informação">T.I</abbr></h1>
         <p>Envie testes de diversas competência técnicas em apenas 3 passos e contrate os seus candidatos sem saber nada de tecnologia.</p>
         <_Button bg={colors.blue_hard}>Avaliar candidatos</_Button>
       </section>

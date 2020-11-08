@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.aside`
+  height: 8.5vh;
   > figure {
     @media (min-width: 700px) {
       display: flex;

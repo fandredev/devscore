@@ -11,4 +11,9 @@ export const _Button = styled.button<ButtonProps<string>>`
   font-size: 20px;
   border: transparent;
   color: #fff;
+
+  &:hover{
+    opacity: .9;
+    transition: all 200ms ease-in
+  }
 `
