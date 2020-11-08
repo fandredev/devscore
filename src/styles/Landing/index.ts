@@ -170,7 +170,7 @@ export const SectionTestAvailable = styled.section`
     margin: 3rem 0;
     padding: 1rem 0;
      @media (min-width: 1200px) and (max-width: 1600px) {
-      height: 30vh;
+      height: max-content;
       display: grid;
      }
   > h3 {
