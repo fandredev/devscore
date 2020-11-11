@@ -1,12 +1,12 @@
 import Header from "../components/Header/Landing";
 import Footer from '../components/Footer';
-import { Formik, Form, Field } from 'formik'
+import { Formik, Field } from 'formik'
 import { schema } from '../helpers/Validation/LoginValidation'
 import { _Button } from '../components/Button/styled';
 import colors from '../constants/colors'
 import Head from 'next/head'
 
-import { Container, Col, Error } from '../styles/Login'
+import { Container, Col, Error } from '../styles/Form'
 
 export default function Login(): JSX.Element {
   return (
