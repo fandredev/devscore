@@ -1,13 +1,18 @@
 import { _Button } from './styled'
 import { ReactNode } from 'react'
 
-interface PropsButton<T> {
-  children: T,
+
+type TypesButton = 'button' | 'submit'
+
+interface PropsButton {
+  children: ReactNode
+  disabled?: boolean
   bg: string
+  type?: TypesButton
 }
 
-export default function Button({ children, bg }: PropsButton<ReactNode>){
+export default function Button({ children, bg, type }: PropsButton){
   return (
-    <_Button bg={bg}>{children}</_Button>
+    <_Button bg={bg} type={type}>{children}</_Button>
   )
 }

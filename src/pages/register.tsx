@@ -5,8 +5,18 @@ import { schema } from '../helpers/Validation/RegisterValidation'
 import { _Button } from '../components/Button/styled';
 import colors from '../constants/colors'
 import Head from 'next/head'
+import Link from 'next/link'
 
-import { Container, Col, Error } from '../styles/Form'
+import { Container, Col, Error, Navigate } from '../styles/Form'
+
+interface FormikValues {
+  name: string
+  company_name: string
+  email: string
+  password: string
+  confirm_password: string
+  terms: boolean
+}
 
 export default function Register(): JSX.Element {
   return (
@@ -32,7 +42,8 @@ export default function Register(): JSX.Element {
                 }}
                 validationSchema={schema}
                 validateOnBlur
-                onSubmit={(values) => console.log(values)}
+                validateOnChange
+                onSubmit={(values: FormikValues) => console.log(values)}
               >
                 {({ dirty, errors, handleSubmit, setFieldValue, values, handleChange }) => (
                   <>
@@ -58,11 +69,11 @@ export default function Register(): JSX.Element {
                         <Error name="password" component="span" />
                       </Col>
                       <Col>
-                        <label htmlFor="confirm_password">Confirmar senha</label>
-                        <Field name="confirm_password" placeholder="*******" type="password" />
-                        <Error name="confirm_password" component="span" />
+                        <label htmlFor="password_confirmation">Confirmar senha</label>
+                        <Field name="password_confirmation" placeholder="*******" type="password" />
+                        <Error name="password_confirmation" component="span" />
                       </Col>
-                      <Col>
+                      <Col id="checkbox-register">
                         <span>concordo com os termos de uso e políticas de privacidade</span>
                         <input type="checkbox"
                           name="terms"
@@ -71,12 +82,16 @@ export default function Register(): JSX.Element {
                           defaultChecked={values.terms}
                           onChange={handleChange}
                           />
-                        <Error name="confirm_password" component="span" />
+                        <Error name="terms" component="span" />
                       </Col>
                     </form>
                     <aside>
-                      <_Button bg={colors.green} disabled={!(dirty && errors)}>Cadastrar</_Button>
-                      <_Button bg={colors.blue_hard}>Voltar para o login</_Button>
+                      <_Button bg={colors.green} disabled={!(dirty && errors)} type="submit">Cadastrar</_Button>
+                      <_Button bg={colors.blue_hard}>
+                        <Link href="/login">
+                          <Navigate>Voltar para o login</Navigate>
+                        </Link>
+                      </_Button>
                     </aside>
                   </>
                 )}

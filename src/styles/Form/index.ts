@@ -5,7 +5,7 @@ import { fullCenter } from '../functions'
 
 export const Container = styled.main`
   ${fullCenter};
-  height: 84vh;
+  height: 100%;
 
   > section {
       color: ${colors.blue_hard};
@@ -48,7 +48,18 @@ export const Col = styled.div`
     border-radius: 5px;
     border: 1px solid #E8E8E8;
   }
+
+  &[id="checkbox-register"] {
+    ${fullCenter};
+    flex-flow: row;
+    margin: 1rem 0;
+    > span {
+      order: 1;
+      margin-left: 5px;
+    }
+  }
 `
 export const Error = styled(ErrorMessage)`
   color: ${colors.red};
 `
+export const Navigate = styled.a`text-decoration: none`
