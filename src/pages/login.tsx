@@ -1,12 +1,12 @@
 import Header from "../components/Header/Landing";
 import Footer from '../components/Footer';
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form, Field } from 'formik'
 import { schema } from '../helpers/Validation/LoginValidation'
 import { _Button } from '../components/Button/styled';
 import colors from '../constants/colors'
 import Head from 'next/head'
 
-import { Container, Col } from '../styles/Login'
+import { Container, Col, Error } from '../styles/Login'
 
 export default function Login(): JSX.Element {
   return (
@@ -24,25 +24,31 @@ export default function Login(): JSX.Element {
               <Formik
                 initialValues={{ email: '', password: ''}}
                 validationSchema={schema}
-                onSubmit={values => console.log(values)}
+                validateOnBlur
+                onSubmit={(values, actions) => {
+                  setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    actions.setSubmitting(false);
+                  }, 1000);
+                }}
               >
-                {({  }) => (
+                {({ dirty, errors, handleSubmit }) => (
                   <>
-                    <Form translate>
+                    <form onSubmit={handleSubmit}>
                       <Col>
                         <label htmlFor="email">Email</label>
                         <Field name="email" placeholder="John.snow@gmail.com" type="email" />
-                        <ErrorMessage name="email" component="span" />
+                        <Error name="email" component="span" />
                       </Col>
                       <Col>
                         <label htmlFor="password">Senha</label>
                         <Field name="password" placeholder="*******" type="password" />
-                        <ErrorMessage name="password" component="span" />
+                        <Error name="password" component="span" />
                       </Col>
-                    </Form>
+                    </form>
                     <aside>
-                      <_Button bg={colors.green} type="submit">Entrar</_Button>
-                      <_Button bg={colors.blue_hard}>Cadastre-se</_Button>
+                      <_Button bg={colors.green}>Entrar</_Button>
+                      <_Button bg={colors.blue_hard} disabled={!(dirty && errors)}>Cadastre-se</_Button>
                     </aside>
                   </>
                 )}

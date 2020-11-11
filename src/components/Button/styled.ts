@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
-interface ButtonProps<T> {
-  bg: T
+interface ButtonProps<T, U> {
+  bg: T,
+  disabled?: U
 }
 
-export const _Button = styled.button<ButtonProps<string>>`
+export const _Button = styled.button<ButtonProps<string, boolean>>`
   background: ${props => props.bg && props.bg};
   border-radius: 5px;
   padding: .8rem 1.3rem;
