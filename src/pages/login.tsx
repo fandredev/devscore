@@ -55,7 +55,7 @@ export default function Login(): JSX.Element {
             </Formik>
           </section>
         </Container>
-      <Footer />
+      <Footer id="login"/>
     </>
   )
 }

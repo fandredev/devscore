@@ -56,7 +56,7 @@ export default function ForgotPassword(): JSX.Element {
             </Formik>
           </section>
         </Container>
-      <Footer />
+      <Footer id='forgot_password'/>
     </>
   )
 }

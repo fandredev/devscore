@@ -8,6 +8,12 @@ export const _Footer = styled.footer`
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
   background-color: ${colors.blue_hard};
+  position: absolute;
+  width: 100%;  
+
+  &[id="login"], &[id="forgot_password"] {
+    bottom: 0
+  }
 
   @media (max-width: 800px) {
     ${fullCenter};
