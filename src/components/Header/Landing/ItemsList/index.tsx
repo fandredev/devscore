@@ -2,8 +2,11 @@ import { Container, Figure, Navigate } from './styled'
 import { _Button } from '../../../Button/styled';
 import colors from '../../../../constants/colors';
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 export default function ItemsList(){
+  const router = useRouter()
+  const navigateToLanding = () => router.push('/')
   return (
     <Container>
       <nav>
@@ -11,6 +14,7 @@ export default function ItemsList(){
           <img
             src="/images/devscore.svg"
             alt="Devscore"
+            onClick={navigateToLanding}
           />
         </Figure>
         <ol>

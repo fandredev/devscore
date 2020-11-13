@@ -1,7 +1,7 @@
 import BurgerMenu from '../../BurgerMenu'
 import React, { useEffect, useState } from 'react'
 import DashItemsList from './DashItemsList';
-import { Container } from './styled'
+import { Container } from '../../../styles/GlobalHeader'
 
 export default function DashRh(){
   const [width, setWidth] = useState<number>(0)
@@ -13,6 +13,7 @@ export default function DashRh(){
     return () => window.removeEventListener("resize", handleWindowState);
 
   }, [handleWindowState]);
+
   return (
     width <= 600 ? (
       <>

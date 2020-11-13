@@ -1,7 +1,7 @@
 import BurgerMenu from '../../BurgerMenu'
 import React, { useEffect, useState } from 'react'
 import ItemsList from './ItemsList';
-import { Container } from './styled'
+import { Container } from '../../../styles/GlobalHeader'
 
 export default function Header(){
   const [width, setWidth] = useState<number>(0)

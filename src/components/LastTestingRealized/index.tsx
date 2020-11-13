@@ -4,9 +4,9 @@ interface LastTestingRealizedProps {
   image: string
   alt: string
   name_people: string
-  score: number,
-  vacancy: string;
-  date: Date,
+  score: number
+  vacancy: string
+  date: Date
 }
 
 export default function LastTestingRealized(){
