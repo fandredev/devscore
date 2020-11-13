@@ -3,9 +3,13 @@ import styled from 'styled-components'
 import colors from '../../constants/colors'
 import { fullCenter } from '../functions'
 
-export const Container = styled.main`
+interface ContainerId {
+  id: string
+}
+
+export const Container = styled.main<ContainerId>`
   ${fullCenter};
-  height: 100%;
+  height: ${props => props.id && '65vh'};
 
   > section {
       color: ${colors.blue_hard};

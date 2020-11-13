@@ -22,7 +22,7 @@ export default function ForgotPassword(): JSX.Element {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
       <Header />
-        <Container>
+        <Container id="forgot_password">
           <section>
               <span>As vezes acontece!</span>
               <h2>Digite o seu email para resetar a senha</h2>
@@ -41,8 +41,8 @@ export default function ForgotPassword(): JSX.Element {
                         <Field name="email" placeholder="John.snow@gmail.com" type="email" />
                         <Error name="email" component="span" />
                       </Col>
-                      <span>Você receberá um email com as instruções para resetar a sua senha</span>
                     </form>
+                      <span>Você receberá um email com as instruções para resetar a sua senha</span>
                     <aside>
                       <_Button bg={colors.green}>Recuperar senha</_Button>
                          <_Button bg={colors.blue_hard}>
