@@ -14,6 +14,7 @@ export default function LastTestingRealized(
   }: LastTestingRealizedProps): JSX.Element {
   return (
     <Container>
+      <h2>Últimos testes realizados</h2>
       <figure>
         <img src={image} alt={alt} />
       </figure>

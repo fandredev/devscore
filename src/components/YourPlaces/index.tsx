@@ -1,5 +1,4 @@
-import { Container, InfoPlaces, InfoDates } from './styled'
-
+import { Container, InfoPlaces, InfoFooterCard } from './styled'
 interface PlacesProps {
   image?: string
   alt: string
@@ -20,14 +19,16 @@ export default function YourPlaces(
         <img src={image} alt={alt} />
       </figure>
         <InfoPlaces>
+          <div>
             <h5>{title}</h5>
+            <span>{date}</span>
+          </div>
             <span>{number_of_tests[0]} de {number_of_tests[1]} testes realizados</span>
-            <span>Nível: {level}</span>
         </InfoPlaces>
-        <InfoDates>
-          <span>{date}</span>
+        <InfoFooterCard>
+          <span>Nível: {level}</span>
           <span>{status === true ? 'Ativa': 'Inativa'}</span>
-        </InfoDates>
+        </InfoFooterCard>
     </Container>
   )
 }

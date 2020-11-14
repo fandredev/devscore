@@ -4,11 +4,19 @@ import colors from '../../constants/colors'
 
 export const Container = styled.div`
   padding: 2rem;
-
-  > h3 {
+  @media (min-width: 500px){
+    grid-column: 1/3;
+  }
+   @media (min-width: 800px) and (max-width: 1600px){
+    grid-column: inherit;
+  }
+  > h2 {
     color: ${colors.blue_hard};
     font-weight: bold;
-    font-size: 30px
+
+    @media (min-width: 800px){
+      font-size: 22px
+    }
   }
   > section {
     display: flex;

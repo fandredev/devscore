@@ -6,3 +6,10 @@ export const fullCenter = css`
     flex-flow: column;
     align-items: center;
 `
+export const sideEdgeCardResponsive = css`
+    border: 1px solid #ddd;
+    border-top: none;
+    height: max-content;
+    border-bottom: none;
+
+`

@@ -11,7 +11,7 @@ const aside = css`
 
 export const Main = styled.main`
   background: ${colors.orange};
-  @media (min-width: 600px) {
+  @media (min-width: 500px) {
     display: grid;
     grid-template-columns: 60% 1fr;
     grid-template-rows: 68vh;
@@ -24,7 +24,7 @@ export const Main = styled.main`
       color: ${colors.blue_hard};
       text-align: center;
       align-self: center;
-       @media (min-width: 600px) {
+       @media (min-width: 500px) {
         text-align: left;
        }
        @media (min-width: 1000px) {

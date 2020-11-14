@@ -10,7 +10,7 @@ export default function FormBox(){
 
   return (
     <Container>
-      <h3>Convidar</h3>
+      <h2>Convidar</h2>
       <section>
         <span>Selecione a vaga</span>
         <span>3 vagas</span>
