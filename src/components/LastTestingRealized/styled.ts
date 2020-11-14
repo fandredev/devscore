@@ -25,14 +25,27 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
   }
-  > figure {
-      @media (min-width: 500px){
-        padding: 0 4rem;
+  > div {
+      @media (min-width: 1000px) and (max-width: 1600px){
+        display: grid;
+        grid-template-columns: 15% 1fr;
+        align-items: center;
       }
-    > img {
-      width: 25%;
+    > figure {
+        @media (min-width: 500px){
+          padding: 0 4rem;
+        }
+         @media (min-width: 1000px) and (max-width: 1600px){
+          padding: 0;
+         }
+      > img {
+        width: 25%;
+          @media (min-width: 1000px) and (max-width: 1600px){
+            width: 100%;
+          }
+      }
     }
-  }
+  } 
 `
 export const InfoPlaces = styled.aside`
     ${fullCenter};
@@ -49,19 +62,35 @@ export const InfoPlaces = styled.aside`
       font-family: ${fonts.primary};
     }
     > span {
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.opacity_black};
       display: block;
 
       &:first-child {
         color: red;
       }
     }
+    > div {
+      @media (min-width: 500px) {
+        width: 100%;
+        justify-content: space-around;
+      }
+      > h5 { 
+        @media (min-width: 500px) {
+          font-weight: 400;
+          font-size: 2rem;
+        }
+      }
+      > span {
+        color: rgba(0, 0, 0, 0.6);
+        mix-blend-mode: normal;
+      }
+    }
 `
 
-export const InfoDates = styled.aside`
+export const InfoVacancy = styled.aside`
   display: flex;
   justify-content: space-around;
-  color: rgba(0, 0, 0, 0.6);
+  color: ${colors.opacity_black};
   mix-blend-mode: normal;
 
   @media (min-width: 500px){

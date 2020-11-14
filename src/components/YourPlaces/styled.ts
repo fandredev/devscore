@@ -19,18 +19,41 @@ export const Container = styled.div`
     @media (min-width: 800px){
       font-size: 22px
     }
+     @media (min-width: 1000px) and (max-width: 1600px){
+      display: flex;
+      justify-content: flex-start;
+      padding: 0 2rem;
+     }
   }
   > h2, figure {
     display: flex;
     justify-content: center;
   }
 
-  > figure {
-    @media (min-width: 500px){
-      padding: 0 5rem;
+  > div {
+    @media (min-width: 500px) {
+      border: 1px solid ${colors.separated_border};
+      border-top: none;
+      border-bottom: none;
     }
-    > img {
-      width: 25%;
+    @media (min-width: 1000px) and (max-width: 1600px){
+      padding: 0;
+      display: grid;
+      grid-template-columns: 20% 1fr;
+    }
+   > figure {
+      @media (min-width: 500px){
+        padding: 0 5rem;
+      }
+      @media (min-width: 1000px) and (max-width: 1600px){
+        padding: 0;
+      }
+      > img {
+        width: 25%;
+          @media (min-width: 1000px) and (max-width: 1600px){
+            width: 100%;
+          }
+      }
     }
   }
 `
@@ -42,15 +65,26 @@ export const InfoPlaces = styled.aside`
       padding: 1rem 1rem 3px 1rem;
     }
     > div {
-      @media (max-width: 800px){
         display: flex;
-      }
+        width: 100%;
+        justify-content: space-between;
+        @media (max-width: 500px) {
+          justify-content: space-around;
+          margin: 2rem 0;
+        }
+        @media (min-width: 1000px) and (max-width: 1600px){
+          width: 100%;
+          justify-content: space-between;
+        }
       > h5 {
         color: rgba(0, 0, 0, 0.87);
         letter-spacing: 0.15px;
         font-size: 1.8rem;
         mix-blend-mode: normal;
         font-family: ${fonts.primary};
+         @media (min-width: 1000px) and (max-width: 1600px){
+          font-size: 15px;
+         }
       }
       > span{
         color: rgba(0, 0, 0, 0.6);
@@ -70,12 +104,20 @@ export const InfoFooterCard = styled.aside`
   mix-blend-mode: normal;
 
    @media (min-width: 500px){
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 1rem;
    }
    @media (min-width: 800px){
     justify-content: space-between;
     padding: 1rem 1rem 3px 1rem;
    }
+  @media (min-width: 1000px) and (max-width: 1600px){
+    grid-column: 2/4;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
   & span:last-child {
     color: ${colors.green};
     letter-spacing: 0.25px;

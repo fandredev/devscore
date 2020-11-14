@@ -15,6 +15,7 @@ export default function YourPlaces(
   return (
     <Container>
       <h2>Suas vagas</h2>
+      <div>
       <figure>  
         <img src={image} alt={alt} />
       </figure>
@@ -23,12 +24,14 @@ export default function YourPlaces(
             <h5>{title}</h5>
             <span>{date}</span>
           </div>
+          
             <span>{number_of_tests[0]} de {number_of_tests[1]} testes realizados</span>
         </InfoPlaces>
         <InfoFooterCard>
           <span>Nível: {level}</span>
           <span>{status === true ? 'Ativa': 'Inativa'}</span>
         </InfoFooterCard>
+      </div>
     </Container>
   )
 }
