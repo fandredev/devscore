@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import DashItemsList from './DashItemsList';
 import { Container } from '../../../styles/GlobalHeader'
 
-export default function DashRh(){
+export default function DashRh() : JSX.Element {
   const [width, setWidth] = useState<number>(0)
   const handleWindowState = () => setWidth(window.innerWidth);
 

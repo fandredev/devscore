@@ -4,7 +4,7 @@ import colors from '../../constants/colors'
 import { fullCenter } from '../functions'
 
 interface ContainerId {
-  id: string
+  id?: string
 }
 
 export const Container = styled.main<ContainerId>`

@@ -4,7 +4,7 @@ import { _Button } from '../Button/styled';
 import colors from '../../constants/colors'
 import Link from 'next/link'
 
-export default function BurgerMenu() {
+export default function BurgerMenu() : JSX.Element {
   return (
     <Menu styles={styles}>
       <Container>

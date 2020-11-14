@@ -4,7 +4,7 @@ import colors from '../../../../constants/colors';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 
-export default function ItemsList(){
+export default function ItemsList() : JSX.Element {
   const router = useRouter()
   const navigateToLanding = () => router.push('/')
   return (

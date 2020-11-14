@@ -8,10 +8,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { Container, Col, Error, Navigate } from '../styles/Form'
-
-interface FormikValues {
-  email: string
-}
+import { FormikForgotPassword } from '../interfaces' 
 
 export default function ForgotPassword(): JSX.Element {
   return (
@@ -30,7 +27,7 @@ export default function ForgotPassword(): JSX.Element {
                 initialValues={{ email: '' }}
                 validationSchema={schema}
                 validateOnBlur
-                onSubmit={(values: FormikValues) => {
+                onSubmit={(values: FormikForgotPassword<string>) => {
                 }}
               >
                 {({ handleSubmit }) => (

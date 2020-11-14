@@ -6,9 +6,7 @@ import React, {
   createContext,
 } from "react";
 
-interface ChildrenProps<RN> {
-  children: RN;
-}
+import { ChildrenProps } from '../interfaces'
 interface WidthProps<T> {
   readonly width: T;
   handleWindowState() : void,

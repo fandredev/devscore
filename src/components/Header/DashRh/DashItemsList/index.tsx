@@ -2,11 +2,9 @@ import { Container, Figure, Navigate } from './styled'
 import { _Button } from '../../../Button/styled';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { IntDashListItems } from '../../../../interfaces'
 
-interface IntDashListItems {
-  name: string
-}
-export default function DashListItems({ name = 'Renata' }: IntDashListItems){
+export default function DashListItems({ name = 'Renata' }: IntDashListItems<string>) : JSX.Element {
   const router = useRouter()
   const navigateToLanding = () => router.push('/')
   return (

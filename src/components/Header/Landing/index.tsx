@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import ItemsList from './ItemsList';
 import { Container } from '../../../styles/GlobalHeader'
 
-export default function Header(){
+export default function Header() : JSX.Element {
   const [width, setWidth] = useState<number>(0)
   const handleWindowState = () => setWidth(window.innerWidth);
 

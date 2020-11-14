@@ -6,7 +6,7 @@ import colors from '../../constants/colors'
 import { Container } from './styled'
 import { Error, Col } from '../../styles/Form'
 
-export default function FormBox(){
+export default function FormBox() : JSX.Element {
 
   return (
     <Container>

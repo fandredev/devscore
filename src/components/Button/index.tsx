@@ -1,18 +1,7 @@
 import { _Button } from './styled'
-import { ReactNode } from 'react'
+import { ButtonProps } from '../../interfaces'
 
-
-type TypesButton = 'button' | 'submit'
-
-interface PropsButton {
-  children: ReactNode
-  disabled?: boolean
-  bg: string
-  type?: TypesButton
-  id?: string
-}
-
-export default function Button({ children, bg, type, id }: PropsButton){
+export default function Button({ children, bg, type, id }: ButtonProps) : JSX.Element{
   return (
     <_Button bg={bg} id={id} type={type}>{children}</_Button>
   )

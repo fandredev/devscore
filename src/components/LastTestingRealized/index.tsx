@@ -1,17 +1,9 @@
 import { Container, InfoVacancy, InfoPlaces } from './styled'
-
-interface LastTestingRealizedProps {
-  image: string
-  alt: string
-  name_people: string
-  score: number
-  vacancy: string
-  date: string
-}
+import { LastTestingRealizedProps } from '../../interfaces'
 
 export default function LastTestingRealized(
   { image, alt, name_people, score, vacancy, date 
-  }: LastTestingRealizedProps): JSX.Element {
+  }: LastTestingRealizedProps<string, number>): JSX.Element {
   return (
      <Container>
         <h2>Últimos testes realizados</h2>

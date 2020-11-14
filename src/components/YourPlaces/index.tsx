@@ -1,17 +1,9 @@
 import { Container, InfoPlaces, InfoFooterCard } from './styled'
-interface PlacesProps {
-  image?: string
-  alt: string
-  title: string
-  number_of_tests: Array<number>,
-  level: string,
-  date: string,
-  status: boolean
-}
+import { PlacesProps } from '../../interfaces'
 
 export default function YourPlaces(
   { image, alt, title, number_of_tests, level, date, status 
-  }: PlacesProps) : JSX.Element{
+  }: PlacesProps<string, Array<number>, boolean>) : JSX.Element{
   return (
     <Container>
       <h2>Suas vagas</h2>

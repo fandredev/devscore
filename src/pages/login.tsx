@@ -7,11 +7,7 @@ import colors from '../constants/colors'
 import Head from 'next/head'
 
 import { Container, Col, Error } from '../styles/Form'
-
-interface FormikValues {
-  email: string,
-  password: string
-}
+import { FormikLoginValues } from '../interfaces'
 
 export default function Login(): JSX.Element {
   return (
@@ -30,7 +26,7 @@ export default function Login(): JSX.Element {
                 initialValues={{ email: '', password: ''}}
                 validationSchema={schema}
                 validateOnBlur
-                onSubmit={(values: FormikValues) => {}}
+                onSubmit={(values: FormikLoginValues<string>) => {}}
               >
                 {({ dirty, errors, handleSubmit }) => (
                   <>

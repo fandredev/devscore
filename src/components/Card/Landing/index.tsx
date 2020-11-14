@@ -1,12 +1,7 @@
 import { Aside } from './styled'
+import { CardProps } from '../../../interfaces'
 
-interface CardProps<T> {
-  url: T,
-  alt?: T,
-  text: T
-}
-
-export default function Card({ url, alt, text } : CardProps<string>) {
+export default function Card({ url, alt, text } : CardProps<string>) : JSX.Element {
   return (
       <Aside>
         <img src="../../../../public/images/icons/java.svg" alt={alt} />

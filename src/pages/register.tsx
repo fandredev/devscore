@@ -6,17 +6,8 @@ import { _Button } from '../components/Button/styled';
 import colors from '../constants/colors'
 import Head from 'next/head'
 import Link from 'next/link'
-
 import { Container, Col, Error, Navigate } from '../styles/Form'
-
-interface FormikValues {
-  name: string
-  company_name: string
-  email: string
-  password: string
-  confirm_password: string
-  terms: boolean
-}
+import { FormikRegisterValues } from '../interfaces'
 
 export default function Register(): JSX.Element {
   return (
@@ -43,7 +34,7 @@ export default function Register(): JSX.Element {
                 validationSchema={schema}
                 validateOnBlur
                 validateOnChange
-                onSubmit={(values: FormikValues) => console.log(values)}
+                onSubmit={(values: FormikRegisterValues<string, boolean>) => console.log(values)}
               >
                 {({ dirty, errors, handleSubmit, setFieldValue, values, handleChange }) => (
                   <>

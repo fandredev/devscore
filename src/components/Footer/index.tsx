@@ -1,10 +1,7 @@
 import { _Footer } from './styled'
+import { PropsFooter } from '../../interfaces'
 
-interface PropsFooter {
-  id?: string
-}
-
-export default function Footer({ id } : PropsFooter){
+export default function Footer({ id } : PropsFooter) : JSX.Element {
   return (
    <_Footer id={id}>
     <span>contato@devscore</span>
