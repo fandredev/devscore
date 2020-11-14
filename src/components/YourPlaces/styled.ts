@@ -4,7 +4,7 @@ import fonts from '../../constants/text'
 import colors from '../../constants/colors'
 import { fullCenter } from '../../styles/functions'
 export const Container = styled.div`
-
+  padding: 2rem 0;
   > h2 {
     font-family: ${fonts.primary};
     color: ${colors.blue_hard};
@@ -14,6 +14,12 @@ export const Container = styled.div`
   > h2, figure {
     display: flex;
     justify-content: center;
+  }
+
+  > figure {
+    > img {
+      width: 25%;
+    }
   }
 `
 export const InfoPlaces = styled.aside`

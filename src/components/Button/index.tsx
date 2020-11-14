@@ -9,10 +9,11 @@ interface PropsButton {
   disabled?: boolean
   bg: string
   type?: TypesButton
+  id?: string
 }
 
-export default function Button({ children, bg, type }: PropsButton){
+export default function Button({ children, bg, type, id }: PropsButton){
   return (
-    <_Button bg={bg} type={type}>{children}</_Button>
+    <_Button bg={bg} id={id} type={type}>{children}</_Button>
   )
 }

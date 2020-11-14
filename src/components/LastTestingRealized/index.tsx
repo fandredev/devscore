@@ -1,4 +1,4 @@
-import { InfoDates, InfoPlaces } from './styled'
+import { Container, InfoDates, InfoPlaces } from './styled'
 
 interface LastTestingRealizedProps {
   image: string
@@ -13,11 +13,10 @@ export default function LastTestingRealized(
   { image, alt, name_people, score, vacancy, date 
   }: LastTestingRealizedProps): JSX.Element {
   return (
-    <>
+    <Container>
       <figure>
         <img src={image} alt={alt} />
       </figure>
-        <hr />
         <InfoPlaces>
             <h5>{name_people}</h5>
             <span>Score: {score}</span>
@@ -26,6 +25,6 @@ export default function LastTestingRealized(
         <InfoDates>
           <span>Realizado: {date}</span>
         </InfoDates>
-    </>
+    </Container>
   )
 }

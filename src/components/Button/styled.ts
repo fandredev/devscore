@@ -16,4 +16,7 @@ export const _Button = styled.button<ButtonProps<string>>`
     opacity: .9;
     transition: all 200ms ease-in
   }
+  &[id="invite"]{
+    margin-top: 20px;
+  }
 `
