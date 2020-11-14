@@ -1,28 +1,33 @@
+import { Container, InfoPlaces, InfoDates } from './styled'
+
 interface PlacesProps {
-  image: string
+  image?: string
   alt: string
   title: string
   number_of_tests: Array<number>,
   level: string,
-  date: Date,
+  date: string,
   status: boolean
 }
 
-export default function YourPlaces(){
+export default function YourPlaces(
+  { image, alt, title, number_of_tests, level, date, status 
+  }: PlacesProps) : JSX.Element{
   return (
-    <>
-      <figure>
-        <img src={''} alt={''} />
+    <Container>
+      <h2>Suas vagas</h2>
+      <figure>  
+        <img src={image} alt={alt} />
       </figure>
-        <aside id="info-places">
-            <h5>Desenvolvedor <abbr title="Júnior">Jr</abbr>Java</h5>
-            <span>15 de 27 testes realizados</span>
-            <span>Nível: Júnior</span>
-        </aside>
-        <aside id="info-dates">
-          <span>{new Date()}</span>
-          <span>Ativa</span>
-        </aside>
-    </>
+        <InfoPlaces>
+            <h5>{title}</h5>
+            <span>{number_of_tests[0]} de {number_of_tests[1]} testes realizados</span>
+            <span>Nível: {level}</span>
+        </InfoPlaces>
+        <InfoDates>
+          <span>{date}</span>
+          <span>{status === true ? 'Ativa': 'Inativa'}</span>
+        </InfoDates>
+    </Container>
   )
 }
