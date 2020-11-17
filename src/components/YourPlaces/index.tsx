@@ -1,5 +1,9 @@
 import { Container, InfoPlaces, InfoFooterCard } from './styled'
 import { PlacesProps } from '../../interfaces'
+import colors from '../../constants/colors'
+import _Button from '../../components/Button'
+
+
 
 export default function YourPlaces(
   { image, alt, title, number_of_tests, level, date, status 
@@ -23,6 +27,9 @@ export default function YourPlaces(
           <span>Nível: {level}</span>
           <span>{status === true ? 'Ativa': 'Inativa'}</span>
         </InfoFooterCard>
+      </div>
+      <div>
+        <_Button bg={colors.green}>Cadastrar</_Button>
       </div>
     </Container>
   )

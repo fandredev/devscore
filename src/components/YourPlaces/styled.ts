@@ -51,9 +51,16 @@ export const Container = styled.div`
       > img {
         width: 25%;
           @media (min-width: 1000px) and (max-width: 1600px){
-            width: 100%;
+            width: 80%;
           }
       }
+    }
+  }
+  > div:last-child {
+    width: 100%;
+    > button {
+      grid-column: 1/4;
+      margin: 2rem 0;
     }
   }
 `

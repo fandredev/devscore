@@ -60,6 +60,24 @@ export interface PlacesProps<T, U, V> {
   status: V
 }
 
+export interface PopulatedArrayYourPlaces {
+  alt: string
+  image: string
+  title: string
+  number_of_tests: number[]
+  level: string
+  date: string
+  status: boolean
+}
+export interface PopulatedArrayYourLastTesting {
+  alt: string
+  image: string
+  name_people: string
+  score: any
+  vacancy: string
+  date: string
+}
+
 // context api
 export interface ChildrenProps<RN> {
   children: RN;

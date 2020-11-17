@@ -1,3 +1,8 @@
+
+declare module "*.svg"
+declare module "*.png"
+declare module "*.jpg"
+
 import 'styled-components'
 
 declare module 'styled-components' {
@@ -7,7 +12,3 @@ declare module 'styled-components' {
     }
   }
 }
-
-declare module "*.svg"
-declare module "*.png"
-declare module "*.jpg"
