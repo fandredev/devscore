@@ -11,7 +11,7 @@ export const Container = styled.header`
   width: 100%;
   background: #fff;
    @media (max-width: 800px) {
-    position: fixed;
+    //position: fixed;
     grid-template-columns: 30% 1fr;
     grid-template-rows: 6rem;
    }

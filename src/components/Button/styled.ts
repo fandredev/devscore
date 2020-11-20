@@ -19,4 +19,8 @@ export const _Button = styled.button<ButtonProps<string>>`
   &[id="invite"]{
     margin-top: 20px;
   }
+  &[id="updated-profile-edit-profile"] {
+    width: 80%;
+    max-width: 350px;
+  }
 `

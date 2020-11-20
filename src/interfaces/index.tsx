@@ -18,7 +18,11 @@ export interface FormikLoginValues<T> {
 export interface FormikForgotPassword<T> {
   email: T
 }
-
+export interface FormikEditProfile {
+  password_now: string
+  password: string
+  confirm_password: string
+}
 export interface ButtonProps {
   children: ReactNode
   disabled?: boolean
@@ -76,6 +80,11 @@ export interface PopulatedArrayYourLastTesting {
   score: any
   vacancy: string
   date: string
+}
+
+export interface TitleProps {
+  children: ReactNode,
+  id?: string
 }
 
 // context api
