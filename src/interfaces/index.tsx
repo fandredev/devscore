@@ -29,7 +29,7 @@ export interface ButtonProps {
 
 export interface CardProps<T> {
   url: T,
-  alt?: T,
+  alt: T,
   text: T
 }
 

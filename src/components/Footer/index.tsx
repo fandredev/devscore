@@ -1,7 +1,8 @@
 import { _Footer } from './styled'
 import { PropsFooter } from '../../interfaces'
 
-export default function Footer({ id } : PropsFooter) : JSX.Element {
+const Footer: React.FC<PropsFooter> = ({ id } : PropsFooter) : JSX.Element => {
+
   return (
    <_Footer id={id}>
     <span>contato@devscore</span>
@@ -9,3 +10,6 @@ export default function Footer({ id } : PropsFooter) : JSX.Element {
    </_Footer>
   )
 }
+
+
+export default Footer

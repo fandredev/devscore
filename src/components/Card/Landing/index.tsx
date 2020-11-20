@@ -1,7 +1,7 @@
 import { Aside } from './styled'
 import { CardProps } from '../../../interfaces'
 
-export default function Card({ alt, text } : CardProps<string>) : JSX.Element {
+const Card: React.FC<CardProps<string>> = ({ alt, text }) : JSX.Element =>{
   return (
       <Aside>
         <img src="../../../../public/images/icons/java.svg" alt={alt} />
@@ -9,3 +9,5 @@ export default function Card({ alt, text } : CardProps<string>) : JSX.Element {
       </Aside>
   )
 }
+
+export default Card

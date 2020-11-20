@@ -4,5 +4,6 @@ export default {
   green:"#04C35C",
   red: '#ce1515',
   separated_border: "rgba(0, 0, 0, 0.12)",
-  opacity_black: "rgba(0, 0, 0, 0.6)"
+  opacity_black: "rgba(0, 0, 0, 0.6)",
+  gray: "#4A5568"
 }
