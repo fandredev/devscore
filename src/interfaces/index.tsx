@@ -23,12 +23,18 @@ export interface FormikEditProfile {
   password: string
   confirm_password: string
 }
+
+// components
 export interface ButtonProps {
   children: ReactNode
   disabled?: boolean
   bg: string
   type?: TypesButton
   id?: string
+}
+export interface CheckboxProps {
+  checked?: boolean
+  number: string | number
 }
 
 export interface CardProps<T> {

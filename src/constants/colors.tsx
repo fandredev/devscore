@@ -5,5 +5,6 @@ export default {
   red: '#ce1515',
   separated_border: "rgba(0, 0, 0, 0.12)",
   opacity_black: "rgba(0, 0, 0, 0.6)",
-  gray: "#4A5568"
+  gray: "#4A5568",
+  easy_text: "#1A202C"
 }
