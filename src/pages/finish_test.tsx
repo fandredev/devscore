@@ -8,10 +8,16 @@ import Title from '../components/Title'
 import Checkbox from '../components/Checkbox'
 
 import { mappedFourExperiences } from '../helpers/Screens'
+import Head from 'next/head'
 
 export default function FinishTest() : JSX.Element {
   return (
     <>
+    <Head>
+      <title>Teste finalizado</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <Header />
       <Container>
         <section>
@@ -34,7 +40,7 @@ export default function FinishTest() : JSX.Element {
           </aside>
         </section>
       </Container>
-    <Footer />
+    <Footer id="finish_test"/>
     </>
   )
 }

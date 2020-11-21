@@ -23,4 +23,11 @@ export const _Button = styled.button<ButtonProps<string>>`
     width: 80%;
     max-width: 350px;
   }
+  &[id="confirm_question"] {
+    width: 50vw;
+    max-width: 400px;
+    @media (min-width: 1000px) {
+      width: 50%;
+    }
+  }
 `

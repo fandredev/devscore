@@ -36,19 +36,19 @@ export interface CheckboxProps {
   checked?: boolean
   number: string | number
 }
-
 export interface CardProps<T> {
   url: T,
   alt: T,
   text: T
 }
-
 export interface PropsFooter {
   id?: string
 }
-
 export interface IntDashListItems<T> {
   name: T
+}
+export interface PropsChildren {
+  children: ReactNode
 }
 
 export interface LastTestingRealizedProps<T,U> {

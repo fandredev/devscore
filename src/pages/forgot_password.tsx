@@ -8,7 +8,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { Container, Col, Error, Navigate } from '../styles/Form'
-import { FormikForgotPassword } from '../interfaces' 
+import { FormikForgotPassword } from '../interfaces'
+import Title from "../components/Title";
 
 export default function ForgotPassword(): JSX.Element {
   return (
@@ -22,7 +23,7 @@ export default function ForgotPassword(): JSX.Element {
         <Container id="forgot_password">
           <section>
               <span>As vezes acontece!</span>
-              <h2>Digite o seu email para resetar a senha</h2>
+              <Title>Digite o seu email para resetar a senha</Title>
               <Formik
                 initialValues={{ email: '' }}
                 validationSchema={schema}

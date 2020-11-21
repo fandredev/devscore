@@ -2,35 +2,23 @@ import Footer from "../components/Footer";
 import Header from "../components/Header/DashRh";
 import LastTestingRealized from "../components/LastTestingRealized";
 import YourPlaces from "../components/YourPlaces";
-import java from '../../public/images/icons/java.svg'
-import user from '../../public/images/icons/user.png'
 import FormBox from "../components/FormBox";
+
+import { populatedArrayYourPlaces, populatedArrayYourTesting } from '../helpers/Screens'
 
 import { PopulatedArrayYourPlaces, PopulatedArrayYourLastTesting } from '../interfaces'
 import { Container } from '../styles/DashboardRH'
+import Head from "next/head";
 
 
 export default function DashboardRH() : JSX.Element {
-  const populatedArrayYourPlaces = new Array(4).fill({
-    alt:"Ícone da linguagem Java",
-    image:java,
-    title:"Desenvolvedor Jr Java",
-    number_of_tests:[15, 27],
-    level:"Júnior",
-    date:'17/10/2010',
-    status:true
-  })
-  const populatedArrayYourTesting = new Array(4).fill({
-    alt:"",
-    image:user,
-    name_people:"Felipe Oliveira",
-    score:Math.floor(Math.random() * 100),
-    vacancy:"Desevolvedor Java Jr",
-    date:'17/10/2010'
-  })
-
   return (
     <>
+    <Head>
+      <title>Dashboard RH</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
       <Header />
       <Container>
         <div>
@@ -44,9 +32,8 @@ export default function DashboardRH() : JSX.Element {
               level={level}
               date={date}
               status={status}
-            /> 
+            />
           ))}
-          {/* criar map */}
         </div>
         <div>
             {populatedArrayYourTesting.map(({ alt, image, name_people, score, vacancy, date }: PopulatedArrayYourLastTesting, index: number) => (

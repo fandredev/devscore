@@ -22,6 +22,10 @@ export const Container = styled.main`
       padding: 0 13rem;
       text-align: left;
     }
+    @media (min-width: 1000px) {
+      padding: 0 22rem;
+      text-align: left;
+    }
     > h5 {
       @media (min-width: 768px) {
        margin:2rem auto;

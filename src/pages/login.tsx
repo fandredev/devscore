@@ -8,6 +8,7 @@ import Head from 'next/head'
 
 import { Container, Col, Error } from '../styles/Form'
 import { FormikLoginValues } from '../interfaces'
+import Title from "../components/Title";
 
 export default function Login(): JSX.Element {
   return (
@@ -21,7 +22,7 @@ export default function Login(): JSX.Element {
         <Container id='login'>
           <section>
               <span>Bem vindo!</span>
-              <h2>Entrar na sua conta</h2>
+              <Title>Entrar na sua conta</Title>
               <Formik
                 initialValues={{ email: '', password: ''}}
                 validationSchema={schema}

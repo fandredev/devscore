@@ -8,12 +8,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { Container, Col, Error, Navigate } from '../styles/Form'
 import { FormikRegisterValues } from '../interfaces'
+import Title from "../components/Title";
 
 export default function Register(): JSX.Element {
   return (
     <>
     <Head>
-      <title>Register</title>
+      <title>Registre-se</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
@@ -21,7 +22,7 @@ export default function Register(): JSX.Element {
         <Container>
           <section>
               <span>Vamos lá?</span>
-              <h2>Digite os seus dados</h2>
+              <Title>Digite os seus dados</Title>
               <Formik
                 initialValues={{
                   name: '',

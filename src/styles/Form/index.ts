@@ -23,11 +23,6 @@ export const Container = styled.main<ContainerId>`
     > span {
       line-height: 3rem;
     }
-    > h2 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin: 1rem 0;
-    }
     > aside {
      ${fullCenter};
       > button {
