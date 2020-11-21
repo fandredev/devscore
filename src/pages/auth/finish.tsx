@@ -1,13 +1,13 @@
 import React from 'react'
-import Footer from '../components/Footer'
-import Header from '../components/Header/Landing'
-import meter from '../../public/images/scoreMeter.png'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header/Landing'
+import meter from '../../../public/images/scoreMeter.png'
 
-import { Container } from '../styles/FinishTest'
-import Title from '../components/Title'
-import Checkbox from '../components/Checkbox'
+import { Container } from '../../styles/FinishTest'
+import Title from '../../components/Title'
+import Checkbox from '../../components/Checkbox'
 
-import { mappedFourExperiences } from '../helpers/Screens'
+import { mappedFourExperiences } from '../../helpers/Screens'
 import Head from 'next/head'
 
 export default function FinishTest() : JSX.Element {

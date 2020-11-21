@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 import OptionChoice from '.'
 
-import { PropsChildren } from '../../interfaces'
+import type { Children } from '../../types'
 
 export default {
   title: 'Components/OptionChoice',
@@ -14,7 +14,7 @@ export default {
   }
 } as Meta
 
-const Template: Story<PropsChildren> = args => <OptionChoice {...args} />
+const Template: Story<Children> = args => <OptionChoice {...args} />
 
 export const Clone = Template.bind({})
 Clone.storyName = 'Opção selecionada'

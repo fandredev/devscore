@@ -1,13 +1,13 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header/DashRh";
-import LastTestingRealized from "../components/LastTestingRealized";
-import YourPlaces from "../components/YourPlaces";
-import FormBox from "../components/FormBox";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header/DashRh";
+import LastTestingRealized from "../../components/LastTestingRealized";
+import YourPlaces from "../../components/YourPlaces";
+import FormBox from "../../components/FormBox";
 
-import { populatedArrayYourPlaces, populatedArrayYourTesting } from '../helpers/Screens'
+import { populatedArrayYourPlaces, populatedArrayYourTesting } from '../../helpers/Screens'
 
-import { PopulatedArrayYourPlaces, PopulatedArrayYourLastTesting } from '../interfaces'
-import { Container } from '../styles/DashboardRH'
+import { PopulatedArrayYourPlaces, PopulatedArrayYourLastTesting } from '../../interfaces'
+import { Container } from '../../styles/DashboardRH'
 import Head from "next/head";
 
 

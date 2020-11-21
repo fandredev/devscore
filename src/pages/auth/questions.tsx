@@ -1,17 +1,17 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header/Auth";
-import Title from "../components/Title";
-import colors from "../constants/colors";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header/Auth";
+import Title from "../../components/Title";
+import colors from "../../constants/colors";
 
-import _Button from '../components/Button'
+import _Button from '../../components/Button'
 
-import menEyeTheCode from '../../public/images/menEyeTheCode.svg'
+import menEyeTheCode from '../../../public/images/menEyeTheCode.svg'
 
-import { Container } from '../styles/QuestionMultipleChoices'
-import OptionChoice from "../components/OptionChoice";
+import { Container } from '../../styles/QuestionMultipleChoices'
+import OptionChoice from "../../components/OptionChoice";
 import Head from "next/head";
 
-import { mappedMultiChoices } from '../helpers/Screens'
+import { mappedMultiChoices } from '../../helpers/Screens'
 
 export default function QuestionMultipleChoice() : JSX.Element{
   return (

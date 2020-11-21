@@ -1,16 +1,16 @@
-import Header from "../components/Header/Landing";
-import Footer from '../components/Footer';
+import Header from "../../components/Header/Landing";
+import Footer from '../../components/Footer';
 import { Formik, Field } from 'formik'
-import { schemaEditProfile, schemaAlterPassword } from '../helpers/Validation/EditProfileValidation'
-import { _Button } from '../components/Button/styled';
-import Title from '../components/Title'
-import colors from '../constants/colors'
+import { schemaEditProfile, schemaAlterPassword } from '../../helpers/Validation/EditProfileValidation'
+import { _Button } from '../../components/Button/styled';
+import Title from '../../components/Title'
+import colors from '../../constants/colors'
 import Head from 'next/head'
 
-import { Col, Error } from '../styles/Form'
-import { Container } from '../styles/EditProfile'
-import { FormikEditProfile, FormikForgotPassword } from '../interfaces'
-import womanAndComputer from '../../public/images/womanAndComputer.svg'
+import { Col, Error } from '../../styles/Form'
+import { Container } from '../../styles/EditProfile'
+import { FormikEditProfile, FormikForgotPasswordValues } from '../../interfaces'
+import womanAndComputer from '../../../public/images/womanAndComputer.svg'
 
 import InputMask from 'react-input-mask'
 
@@ -29,7 +29,7 @@ export default function EditProfile(): JSX.Element {
             initialValues={{ name: '', company_name: '', email: '', phone: '' }}
             validationSchema={schemaEditProfile}
             validateOnBlur
-            onSubmit={(values: FormikForgotPassword<string>) => {
+            onSubmit={(values: FormikForgotPasswordValues<string>) => {
             }}
           >
             {({ handleSubmit, values, handleChange }) => (

@@ -55,6 +55,6 @@ export const Container = styled.section`
     margin: 1rem auto;
   }
 `
-export const Navigate = styled.a`text-decoration: none`
+export const Navigate = styled.a`text-decoration: none; color: #fff;`
 
 Object.freeze(styles)

@@ -1,19 +1,17 @@
 import React, {
   useState,
   useContext,
-  ReactNode,
   useCallback,
   createContext,
+  ReactNode,
 } from "react";
-
-import { ChildrenProps } from '../interfaces'
 interface WidthProps<T> {
   readonly width: T;
   handleWindowState() : void,
 }
 const ResponsiveContext = createContext<WidthProps<number>>({} as WidthProps<number>)
 
-export default function ResponsiveProvider({ children }: ChildrenProps<ReactNode>) {
+export default function ResponsiveProvider({ children }: ReactNode | any) {
   const [width, setWidth] = useState(0);
 
   const handleWindowState = useCallback(() => {

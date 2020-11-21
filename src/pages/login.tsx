@@ -9,6 +9,7 @@ import Head from 'next/head'
 import { Container, Col, Error } from '../styles/Form'
 import { FormikLoginValues } from '../interfaces'
 import Title from "../components/Title";
+import { Navigate } from "../components/BurgerMenu/styled";
 
 export default function Login(): JSX.Element {
   return (
@@ -44,8 +45,12 @@ export default function Login(): JSX.Element {
                       </Col>
                     </form>
                     <aside>
-                      <_Button bg={colors.green}>Entrar</_Button>
-                      <_Button bg={colors.blue_hard} disabled={!(dirty && errors)}>Cadastre-se</_Button>
+                      <_Button bg={colors.green} disabled={!(dirty && errors)}>Entrar</_Button>
+                      <_Button bg={colors.blue_hard}>
+                        <Navigate href="/register">
+                          <a>Cadastre-se</a>
+                        </Navigate>
+                      </_Button>
                     </aside>
                   </>
                 )}

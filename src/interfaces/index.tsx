@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
-import { TypesButton } from '../types'
+import type { TypesButton, Children } from '../types'
 
+//formik
 export interface FormikRegisterValues<T, U> {
   name: T
   company_name: T
@@ -9,13 +9,11 @@ export interface FormikRegisterValues<T, U> {
   confirm_password: T
   terms: U
 }
-
 export interface FormikLoginValues<T> {
   email:T,
   password: T
 }
-
-export interface FormikForgotPassword<T> {
+export interface FormikForgotPasswordValues<T> {
   email: T
 }
 export interface FormikEditProfile {
@@ -24,9 +22,15 @@ export interface FormikEditProfile {
   confirm_password: string
 }
 
+export interface FormikCreateVacancyProps {
+  vacancy_name: string
+  level: string
+  date: string
+}
+
 // components
 export interface ButtonProps {
-  children: ReactNode
+  children: Children
   disabled?: boolean
   bg: string
   type?: TypesButton
@@ -47,10 +51,6 @@ export interface PropsFooter {
 export interface ItemsDashHeader<T> {
   readonly name?: T
 }
-export interface PropsChildren {
-  children: ReactNode
-}
-
 export interface LastTestingRealizedProps<T,U> {
   image: T
   alt: T
@@ -59,7 +59,6 @@ export interface LastTestingRealizedProps<T,U> {
   vacancy: T
   date: T
 }
-
 export interface PlacesProps<T, U, V> {
   image?: T
   alt: T
@@ -69,7 +68,12 @@ export interface PlacesProps<T, U, V> {
   date: T,
   status: V
 }
+export interface TechnologiesVacancyProps {
+  image: string
+  tech: string
+}
 
+// helpers
 export interface PopulatedArrayYourPlaces {
   alt: string
   image: string
@@ -89,11 +93,6 @@ export interface PopulatedArrayYourLastTesting {
 }
 
 export interface TitleProps {
-  children: ReactNode,
+  children: Children,
   id?: string
-}
-
-// context api
-export interface ChildrenProps<RN> {
-  children: RN;
 }

@@ -5,7 +5,7 @@ import { CheckboxProps } from '../../interfaces'
 const Checkbox : React.FC<CheckboxProps> = ({ checked = false, number = 0 }) => {
   return (
     <Container>
-      <input type="radio" checked={checked}/>
+      <input type="radio" defaultChecked={checked}/>
       &nbsp;<span>{number}</span>
     </Container>
   )

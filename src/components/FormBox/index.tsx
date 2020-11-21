@@ -6,7 +6,7 @@ import colors from '../../constants/colors'
 import { Container } from './styled'
 import { Error, Col } from '../../styles/Form'
 
-export default function FormBox() : JSX.Element {
+const FormBox: React.FC = () : JSX.Element => {
 
   return (
     <Container>
@@ -42,3 +42,5 @@ export default function FormBox() : JSX.Element {
     </Container>
   )
 }
+
+export default FormBox
