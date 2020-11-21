@@ -44,8 +44,8 @@ export interface CardProps<T> {
 export interface PropsFooter {
   id?: string
 }
-export interface IntDashListItems<T> {
-  name: T
+export interface ItemsDashHeader<T> {
+  readonly name?: T
 }
 export interface PropsChildren {
   children: ReactNode

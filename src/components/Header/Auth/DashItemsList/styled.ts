@@ -33,15 +33,15 @@ export const Container = styled.header`
   > ol {
       width: 100%;
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
+      justify-content:flex-end;
+      align-items: flex-end;
 
       > li {
         color: ${colors.blue_hard};
         font-weight: 500;
+        cursor: default;
       }
     }
   }
 }
 `
-export const Navigate = styled.a`text-decoration: none`

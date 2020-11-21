@@ -4,7 +4,7 @@ import { _Button } from '../Button/styled';
 import colors from '../../constants/colors'
 import Link from 'next/link'
 
-export default function BurgerMenu() : JSX.Element {
+const BurgerMenu: React.FC = () : JSX.Element => {
   return (
     <Menu styles={styles}>
       <Container>
@@ -30,3 +30,5 @@ export default function BurgerMenu() : JSX.Element {
     </Menu>
   )
 }
+
+export default BurgerMenu

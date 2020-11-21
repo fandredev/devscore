@@ -12,6 +12,8 @@ import { Container } from '../styles/EditProfile'
 import { FormikEditProfile, FormikForgotPassword } from '../interfaces'
 import womanAndComputer from '../../public/images/womanAndComputer.svg'
 
+import InputMask from 'react-input-mask'
+
 export default function EditProfile(): JSX.Element {
   return (
     <>
@@ -30,7 +32,7 @@ export default function EditProfile(): JSX.Element {
             onSubmit={(values: FormikForgotPassword<string>) => {
             }}
           >
-            {({ handleSubmit }) => (
+            {({ handleSubmit, values, handleChange }) => (
               <>
                 <form id="edit-profile" onSubmit={handleSubmit}>
                 <Title id="edit-profile-title">Editar Perfil</Title>
@@ -38,22 +40,30 @@ export default function EditProfile(): JSX.Element {
 
                   <Col>
                     <label htmlFor="name">Seu nome</label>
-                    <Field name="name" type="text" />
+                    <Field name="name" type="text" autoComplete="hidden" />
                     <Error name="name" component="span" />
                   </Col>
                    <Col>
                     <label htmlFor="company_name">Nome da empresa</label>
-                    <Field name="company_name" type="text" />
+                    <Field name="company_name" type="text" autoComplete="hidden" />
                     <Error name="company_name" component="span" />
                   </Col>
                    <Col>
                     <label htmlFor="email">Email</label>
-                    <Field name="email" placeholder="John.snow@gmail.com"  type="email" />
+                    <Field name="email" placeholder="John.snow@gmail.com" type="email" autoComplete="hidden"  />
                     <Error name="email" component="span" />
                   </Col>
                    <Col>
                     <label htmlFor="phone">Telefone</label>
-                    <Field name="phone" placeholder="(11) 945723696" type="text" />
+                    <InputMask
+                      mask="(99) 999999999"
+                      maskChar={null}
+                      value={values.phone}
+                      name="phone"
+                      placeholder="(11) 945723696"
+                      autoComplete="hidden"
+                      onChange={(e: Event) => handleChange(e)}
+                     />
                     <Error name="phone" component="span" />
                   </Col>
                 </section>

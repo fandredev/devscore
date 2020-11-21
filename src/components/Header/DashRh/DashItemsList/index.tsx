@@ -1,22 +1,14 @@
-import { Container, Figure, Navigate } from './styled'
+import { Container, Navigate } from './styled'
 import { _Button } from '../../../Button/styled';
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { IntDashListItems } from '../../../../interfaces'
+import { ItemsDashHeader } from '../../../../interfaces'
+import Logo from '../../../Logo';
 
-export default function DashListItems({ name = 'Renata' }: IntDashListItems<string>) : JSX.Element {
-  const router = useRouter()
-  const navigateToLanding = () => router.push('/')
+const DashListItems: React.FC<ItemsDashHeader<string>> = ({ name = 'Renata' }) : JSX.Element => {
   return (
     <Container>
       <nav>
-        <Figure>
-          <img
-            src="/images/devscore.svg"
-            alt="Devscore"
-            onClick={navigateToLanding}
-          />
-        </Figure>
+       <Logo />
         <ol>
           <li>
             Dashboard
@@ -33,3 +25,4 @@ export default function DashListItems({ name = 'Renata' }: IntDashListItems<stri
     </Container>
   )
 }
+export default DashListItems

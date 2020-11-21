@@ -46,10 +46,4 @@ export const Container = styled.header`
   }
 }
 `
-export const Figure = styled.figure`
-width: max-content;
-  > img {
-    width: 20vw;
-  }
-`
 export const Navigate = styled.a`text-decoration: none`

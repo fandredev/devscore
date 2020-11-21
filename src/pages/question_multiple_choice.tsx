@@ -1,5 +1,5 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header/Landing";
+import Header from "../components/Header/Auth";
 import Title from "../components/Title";
 import colors from "../constants/colors";
 

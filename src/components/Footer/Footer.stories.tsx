@@ -24,7 +24,7 @@ export default {
 const Template: Story<PropsFooter> = args => <Footer {...args} />
 
 export const FooterNoAuth = Template.bind({})
-FooterNoAuth.storyName = 'Footer Auth'
+FooterNoAuth.storyName = 'Footer'
 
 FooterNoAuth.args = {
   id: 'forgot_password'
