@@ -1,24 +1,23 @@
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Story, Meta } from "@storybook/react/types-6-0"
+import { ReactNode } from "react"
 
-import OptionChoice from '.'
-
-import type { Children } from '../../types'
+import OptionChoice from "."
 
 export default {
-  title: 'Components/OptionChoice',
+  title: "Components/OptionChoice",
   component: OptionChoice,
   argTypes: {
     children: {
-      description: 'O texto que apareça nas perguntas'
-    }
-  }
+      description: "O texto que apareça nas perguntas",
+    },
+  },
 } as Meta
 
-const Template: Story<Children> = args => <OptionChoice {...args} />
+const Template: Story<ReactNode> = args => <OptionChoice></OptionChoice>
 
 export const Clone = Template.bind({})
-Clone.storyName = 'Opção selecionada'
+Clone.storyName = "Opção selecionada"
 
 Clone.args = {
-  children: 'Verdadeira'
+  children: "Verdadeira",
 }
