@@ -13,7 +13,7 @@ export default {
   },
 } as Meta
 
-const Template: Story<ReactNode> = args => <OptionChoice></OptionChoice>
+const Template: Story<ReactNode> = () => <OptionChoice></OptionChoice>
 
 export const Clone = Template.bind({})
 Clone.storyName = "Opção selecionada"
