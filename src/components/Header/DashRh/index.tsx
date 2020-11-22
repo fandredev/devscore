@@ -24,7 +24,6 @@ export default function DashRh(): JSX.Element {
             alt="Devscore"
             width={200}
             height={200}
-            onClick={navigateToLanding}
           />
         </figure>
       </Container>
