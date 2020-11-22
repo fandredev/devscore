@@ -1,32 +1,33 @@
-import BurgerMenu from '../../BurgerMenu'
-import React, { useEffect, useState } from 'react'
-import ItemsList from './ItemsList';
-import { Container } from '../../../styles/GlobalHeader'
+import BurgerMenu from "../../BurgerMenu"
+import React, { useEffect, useState } from "react"
+import ItemsList from "./ItemsList"
+import { Container } from "../../../styles/GlobalHeader"
+import Image from "next/image"
 
-export default function Header() : JSX.Element {
+export default function Header(): JSX.Element {
   const [width, setWidth] = useState<number>(0)
-  const handleWindowState = () => setWidth(window.innerWidth);
+  const handleWindowState = () => setWidth(window.innerWidth)
 
-   useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowState);
-    return () => window.removeEventListener("resize", handleWindowState);
-
-  }, [handleWindowState]);
-  return (
-    width <= 600 ? (
-      <>
+  useEffect(() => {
+    setWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowState)
+    return () => window.removeEventListener("resize", handleWindowState)
+  }, [handleWindowState])
+  return width <= 600 ? (
+    <>
       <BurgerMenu />
-        <Container>
+      <Container>
         <figure id="responsive">
-            <img
-              src="/images/devscore.svg"
-              alt="Devscore"
-            />
+          <Image
+            src="/images/devscore.svg"
+            alt="Devscore"
+            width={200}
+            height={200}
+          />
         </figure>
       </Container>
-      </>
-    ):
-      <ItemsList />
+    </>
+  ) : (
+    <ItemsList />
   )
 }

@@ -1,4 +1,4 @@
-import type { TypesButton, Children } from '../types'
+import type { TypesButton, Children } from "../types"
 
 //formik
 export interface FormikRegisterValues<T, U> {
@@ -10,7 +10,7 @@ export interface FormikRegisterValues<T, U> {
   terms: U
 }
 export interface FormikLoginValues<T> {
-  email:T,
+  email: T
   password: T
 }
 export interface FormikForgotPasswordValues<T> {
@@ -41,8 +41,8 @@ export interface CheckboxProps {
   number: string | number
 }
 export interface CardProps<T> {
-  url: T,
-  alt: T,
+  url: T
+  alt: T
   text: T
 }
 export interface PropsFooter {
@@ -51,7 +51,7 @@ export interface PropsFooter {
 export interface ItemsDashHeader<T> {
   readonly name?: T
 }
-export interface LastTestingRealizedProps<T,U> {
+export interface LastTestingRealizedProps<T, U> {
   image: T
   alt: T
   name_people: T
@@ -63,9 +63,9 @@ export interface PlacesProps<T, U, V> {
   image?: T
   alt: T
   title: T
-  number_of_tests: U,
-  level: T,
-  date: T,
+  number_of_tests: U
+  level: T
+  date: T
   status: V
 }
 export interface TechnologiesVacancyProps {
@@ -76,7 +76,7 @@ export interface TechnologiesVacancyProps {
 // helpers
 export interface PopulatedArrayYourPlaces {
   alt: string
-  image: string
+  image?: string
   title: string
   number_of_tests: number[]
   level: string
@@ -85,7 +85,7 @@ export interface PopulatedArrayYourPlaces {
 }
 export interface PopulatedArrayYourLastTesting {
   alt: string
-  image: string
+  image?: string
   name_people: string
   score: any
   vacancy: string
@@ -93,6 +93,6 @@ export interface PopulatedArrayYourLastTesting {
 }
 
 export interface TitleProps {
-  children: Children,
+  children: Children
   id?: string
 }

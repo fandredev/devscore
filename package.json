@@ -29,6 +29,7 @@
     "formik": "^2.2.3",
     "next": "latest",
     "next-images": "^1.6.2",
+    "nprogress": "^0.2.0",
     "react": "^16.13.0",
     "react-burger-menu": "^2.9.0",
     "react-dom": "^16.13.0",
@@ -45,6 +46,7 @@
     "@storybook/addon-links": "^6.1.1",
     "@storybook/react": "^6.1.1",
     "@types/node": "12.0.12",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "16.8.23",
     "@types/react-burger-menu": "^2.6.2",
     "@types/react-dom": "16.8.4",
@@ -59,5 +61,15 @@
     "lint-staged": "^10.5.1",
     "typescript": "4.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit":"lint-staged"
+    }
+  },
+   "lint-staged": {
+      "*.{ts,tsx,js}": [
+        "prettier --write"
+      ]
+    }
 }
