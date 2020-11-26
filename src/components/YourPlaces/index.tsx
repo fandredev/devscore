@@ -1,8 +1,8 @@
-import { Container, InfoPlaces, InfoFooterCard } from "./styled"
 import { PlacesProps } from "../../interfaces"
-import colors from "../../constants/colors"
 import _Button from "../../components/Button"
 import Image from "next/image"
+import { SectionYourVacancy } from "./styled"
+import Title from "../Title"
 
 export default function YourPlaces({
   image,
@@ -13,31 +13,35 @@ export default function YourPlaces({
   date,
   status,
 }: PlacesProps<string | any, Array<number>, boolean>): JSX.Element {
+  const verified = () => {
+    if (level === "Júnior") return "JR"
+    else if (level === "Pleno") return "PL"
+    else return "SR"
+  }
   return (
-    <Container>
-      <h2>Suas vagas</h2>
+    <SectionYourVacancy>
+      <div>
+        <Title>Suas vagas</Title>
+      </div>
       <div>
         <figure>
-          <Image src={image} alt={alt} width={500} height={500} />
+          <Image src={image} alt={alt} width={60} height={60} />
         </figure>
-        <InfoPlaces>
-          <div>
-            <h5>{title}</h5>
-            <span>{date}</span>
-          </div>
-
-          <span>
+        <aside>
+          <h3>
+            Desenvolvedor <abbr title={level}>{verified}</abbr>
+            {title}
+          </h3>
+          <p>
             {number_of_tests[0]} de {number_of_tests[1]} testes realizados
-          </span>
-        </InfoPlaces>
-        <InfoFooterCard>
+          </p>
           <span>Nível: {level}</span>
-          <span>{status === true ? "Ativa" : "Inativa"}</span>
-        </InfoFooterCard>
+        </aside>
+        <aside>
+          <span>{date}</span>
+          <span>{status ? "Ativa" : "Inativa"}</span>
+        </aside>
       </div>
-      <div>
-        <_Button bg={colors.green}>Cadastrar</_Button>
-      </div>
-    </Container>
+    </SectionYourVacancy>
   )
 }

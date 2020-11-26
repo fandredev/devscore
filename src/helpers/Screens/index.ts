@@ -1,6 +1,3 @@
-import java from "../../../public/images/icons/java.svg"
-import user from "../../../public/images/icons/user.png"
-
 export const mappedFourExperiences = [
   {
     number: 1,
@@ -54,21 +51,22 @@ export const mappedMultiChoices = [
   },
 ]
 export const populatedArrayYourPlaces = new Array(4).fill({
-  alt: "Ícone da linguagem Java",
-  //image:java,
-  title: "Desenvolvedor Jr Java",
-  number_of_tests: [15, 27],
   level: "Júnior",
-  date: "17/10/2010",
   status: true,
+  date: "17/10/2020",
+  image: "/images/svg/java.svg",
+  alt: "Java",
+  number_of_tests: [15, 27],
+  title: "Java",
 })
 export const populatedArrayYourTesting = new Array(4).fill({
-  alt: "",
-  //image:user,
+  image: "/images/icons/user.png",
+  alt: "Usuário",
   name_people: "Felipe Oliveira",
-  score: Math.floor(Math.random() * 100),
-  vacancy: "Desevolvedor Java Jr",
-  date: "17/10/2010",
+  score: 32,
+  vacancy: "Desenvolvedor Java Jr",
+  level: "Júnior",
+  date: "17/10/2020",
 })
 export const populatedTechsFront = new Array(3).fill({
   image: "",

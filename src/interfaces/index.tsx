@@ -58,6 +58,7 @@ export interface LastTestingRealizedProps<T, U> {
   score: U
   vacancy: T
   date: T
+  level: T
 }
 export interface PlacesProps<T, U, V> {
   image?: T

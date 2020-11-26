@@ -9,7 +9,7 @@ import {
   SectionTechnogies,
   SectionRegister,
   ItemsTitle,
-} from "../../styles/rh/CreateVacancy"
+} from "../../styles/rh/createvacancy"
 
 import { schema } from "../../helpers/Validation/CreateVacancyValidation"
 import Title from "../../components/Title"

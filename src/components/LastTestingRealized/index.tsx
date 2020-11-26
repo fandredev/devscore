@@ -1,29 +1,45 @@
-import { Container, InfoVacancy, InfoPlaces } from './styled'
-import { LastTestingRealizedProps } from '../../interfaces'
+import { SectionTest } from "./styled"
 
-export default function LastTestingRealized(
-  { image, alt, name_people, score, vacancy, date 
-  }: LastTestingRealizedProps<string, number>): JSX.Element {
+import { LastTestingRealizedProps } from "../../interfaces"
+import Image from "next/image"
+import React from "react"
+import Title from "../Title"
+export default function LastTestingRealized({
+  image,
+  alt,
+  name_people,
+  score,
+  vacancy,
+  date,
+  level = "Júnior",
+}: LastTestingRealizedProps<string, number>): JSX.Element {
+  const verified = () => {
+    if (level === "Júnior") return "JR"
+    else if (level === "Pleno") return "PL"
+    else return "SR"
+  }
   return (
-     <Container>
-        <h2>Últimos testes realizados</h2>
-        <div>
-        <figure>  
-          <img src={image} alt={alt} />
+    <SectionTest>
+      <div>
+        <Title>Últimos testes realizados</Title>
+      </div>
+      <div>
+        <figure>
+          <Image src={image} alt={alt} width={60} height={60} />
         </figure>
-          <InfoPlaces>
-            <div>
-              <h5>{name_people}</h5>
-              <span>Realizado: {date}</span>
-            </div>
-            <div>
-               <span>Score: {score}</span>
-            </div>
-          </InfoPlaces>
-          <InfoVacancy>
-               <span>Vaga: {vacancy}</span>
-          </InfoVacancy>
-        </div>
-    </Container>
+        <aside>
+          <h3>{name_people}</h3>
+          <p>
+            Score: <span>{score}</span> pontos
+          </p>
+          <span>
+            Vaga: {vacancy} <abbr title={level}>{verified()}</abbr>
+          </span>
+        </aside>
+        <aside>
+          <span>Realizado: {date}</span>
+        </aside>
+      </div>
+    </SectionTest>
   )
 }
