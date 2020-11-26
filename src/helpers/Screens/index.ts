@@ -70,3 +70,11 @@ export const populatedArrayYourTesting = new Array(4).fill({
   vacancy: "Desevolvedor Java Jr",
   date: "17/10/2010",
 })
+export const populatedTechsFront = new Array(3).fill({
+  image: "",
+  tech: "HTML5",
+})
+export const populatedTechsBack = new Array(6).fill({
+  image: "",
+  tech: "HTML5",
+})

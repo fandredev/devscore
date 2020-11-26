@@ -1,21 +1,32 @@
-import { TechnologiesVacancyProps} from '../../interfaces'
-import checkedIcon from '../../../public/images/icons/checked.png'
+import { TechnologiesVacancyProps } from "../../interfaces"
+import Image from "next/image"
+import { Container } from "./styled"
 
-import { Container } from './styled'
-
-const TechnologiesVacancy: React.FC<TechnologiesVacancyProps> = ({ image, tech = 'HTML5' }) => {
+const TechnologiesVacancy: React.FC<TechnologiesVacancyProps> = ({
+  image,
+  tech = "HTML5",
+}) => {
   return (
     <Container>
       <figure>
-        <img src={checkedIcon} alt="" />
+        <Image
+          src="/images/icons/checked.png"
+          alt={tech}
+          width={20}
+          height={20}
+        />
       </figure>
       <section>
-         <img src={image} alt="" />
-         <span>{tech.toUpperCase()}</span>
+        <Image
+          src="/images/icons/html.svg"
+          alt={tech}
+          width={100}
+          height={100}
+        />
+        <span>{tech.toUpperCase()}</span>
       </section>
     </Container>
   )
 }
-
 
 export default TechnologiesVacancy
