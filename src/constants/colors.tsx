@@ -8,4 +8,5 @@ export default {
   gray: "#4A5568",
   easy_text: "#1A202C",
   rh_bg_tech_color: "#969696",
+  table_items: "#25213B",
 }

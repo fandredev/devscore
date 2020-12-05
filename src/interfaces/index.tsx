@@ -21,11 +21,14 @@ export interface FormikEditProfile {
   password: string
   confirm_password: string
 }
-
 export interface FormikCreateVacancyProps {
   vacancy_name: string
   level: string
   date: string
+}
+export interface FormikInviteVacancy {
+  candidate_name: string
+  candidate_email: string
 }
 
 // components

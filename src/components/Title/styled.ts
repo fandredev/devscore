@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import colors from "../../constants/colors"
 
 export const TitleStyled = styled.h2`
   font-size: 3rem;
   font-weight: 700;
   margin: 1rem 0;
-  color: #1a202c;
+  color: ${colors.easy_text};
 
   &[id="edit-profile-title"] {
     @media (min-width: 600px) and (max-width: 1000px) {
@@ -33,5 +34,8 @@ export const TitleStyled = styled.h2`
   }
   &[id="rh-register-title"] {
     font-size: 1.6rem;
+  }
+  &[id="invite-vacancy-rh"] {
+    color: ${colors.blue_hard};
   }
 `

@@ -1,5 +1,11 @@
-import Document, { DocumentContext, Head, Html, NextScript, Main } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  NextScript,
+  Main,
+} from "next/document"
+import { ServerStyleSheet } from "styled-components"
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -9,8 +15,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         })
 
       const initialProps = await Document.getInitialProps(ctx)
@@ -27,12 +32,23 @@ export default class MyDocument extends Document {
       sheet.seal()
     }
   }
-  render(){
+  render() {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

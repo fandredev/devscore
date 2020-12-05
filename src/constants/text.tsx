@@ -1,4 +1,5 @@
 export default {
-  primary: 'Roboto',
-  secondary: 'Poppins'
+  primary: "Roboto",
+  secondary: "Poppins",
+  tertiary: "Inter",
 }
